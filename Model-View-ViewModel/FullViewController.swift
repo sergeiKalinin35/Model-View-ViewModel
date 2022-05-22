@@ -13,9 +13,7 @@ class FullViewController: UIViewController {
     @IBOutlet var imageFull: UIImageView!
     @IBOutlet var numberLessons: UILabel!
     @IBOutlet var numberTests: UILabel!
-    
-    
-    
+    @IBOutlet var heart: UIButton!
     
     
     override func viewDidLoad() {

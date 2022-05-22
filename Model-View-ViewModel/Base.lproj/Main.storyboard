@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oJm-FG-dtj">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Courses-->
         <scene sceneID="EEn-wp-j7F">
             <objects>
                 <tableViewController id="sw6-bR-2JC" customClass="HomeViewController" customModule="Model_View_ViewModel" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,7 +60,7 @@
                             <outlet property="delegate" destination="sw6-bR-2JC" id="hBq-BL-CAF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="DeI-v0-C2g"/>
+                    <navigationItem key="navigationItem" title="Courses" id="DeI-v0-C2g"/>
                     <connections>
                         <outlet property="tableViewTwo" destination="Tqu-qN-I8J" id="YqF-34-nyT"/>
                         <segue destination="aIv-TJ-MMS" kind="show" identifier="segue" id="3wa-l4-hOv"/>
@@ -128,6 +129,17 @@
                                     <constraint firstAttribute="width" secondItem="3Mx-Vp-hx6" secondAttribute="height" multiplier="374:355" id="wC8-O9-d6r"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EK-J6-oF1">
+                                <rect key="frame" x="302" y="512" width="45.5" height="45.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6EK-J6-oF1" secondAttribute="height" multiplier="1:1" id="gB6-cB-A6c"/>
+                                </constraints>
+                                <color key="tintColor" red="0.89330971240000001" green="0.09805227071" blue="0.21939542889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nCI-iB-mxK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -136,16 +148,20 @@
                             <constraint firstItem="nCI-iB-mxK" firstAttribute="trailing" secondItem="vxr-kp-eCt" secondAttribute="trailing" constant="20" id="87N-o9-IHf"/>
                             <constraint firstItem="nCI-iB-mxK" firstAttribute="trailing" secondItem="3Mx-Vp-hx6" secondAttribute="trailing" constant="20" id="AHV-FF-EzS"/>
                             <constraint firstItem="nCI-iB-mxK" firstAttribute="trailing" secondItem="lRr-tX-Js2" secondAttribute="trailing" constant="209.5" id="I5G-DT-T6u"/>
+                            <constraint firstItem="6EK-J6-oF1" firstAttribute="leading" secondItem="3Mx-Vp-hx6" secondAttribute="trailing" constant="-92" id="IKw-CV-MmG"/>
                             <constraint firstItem="lRr-tX-Js2" firstAttribute="top" secondItem="3Mx-Vp-hx6" secondAttribute="bottom" constant="82" id="QXB-dE-PIr"/>
                             <constraint firstItem="vxr-kp-eCt" firstAttribute="top" secondItem="nCI-iB-mxK" secondAttribute="top" constant="45" id="Y4x-Rs-1Cb"/>
                             <constraint firstItem="3Mx-Vp-hx6" firstAttribute="leading" secondItem="nCI-iB-mxK" secondAttribute="leading" constant="20" id="c0l-J1-fLr"/>
+                            <constraint firstItem="6EK-J6-oF1" firstAttribute="top" secondItem="3Mx-Vp-hx6" secondAttribute="bottom" constant="-81" id="eI4-1g-Vyk"/>
                             <constraint firstItem="3Mx-Vp-hx6" firstAttribute="top" secondItem="vxr-kp-eCt" secondAttribute="bottom" constant="31.5" id="hxN-Yd-XRY"/>
+                            <constraint firstItem="nCI-iB-mxK" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6EK-J6-oF1" secondAttribute="trailing" symbolic="YES" id="oCw-yI-rZ4"/>
                             <constraint firstItem="vxr-kp-eCt" firstAttribute="leading" secondItem="nCI-iB-mxK" secondAttribute="leading" constant="20" id="vRf-Z4-LuM"/>
                             <constraint firstItem="nCI-iB-mxK" firstAttribute="bottom" secondItem="lRr-tX-Js2" secondAttribute="bottom" constant="122" id="vqE-0h-1fi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gEE-T3-ZLw"/>
                     <connections>
+                        <outlet property="heart" destination="6EK-J6-oF1" id="rsi-62-WTE"/>
                         <outlet property="imageFull" destination="3Mx-Vp-hx6" id="ICw-fF-Wjm"/>
                         <outlet property="nameFull" destination="vxr-kp-eCt" id="P2S-Ef-HHj"/>
                         <outlet property="numberLessons" destination="eL2-8i-hde" id="eJi-sr-xmM"/>
@@ -174,6 +190,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="swift-og" width="1200" height="1200"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
