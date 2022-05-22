@@ -13,6 +13,7 @@
 		06082537282D82870068547D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06082535282D82870068547D /* Main.storyboard */; };
 		06082539282D828E0068547D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06082538282D828E0068547D /* Assets.xcassets */; };
 		0608253C282D828E0068547D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0608253A282D828E0068547D /* LaunchScreen.storyboard */; };
+		0631AEF6283AD7D900F5CF88 /* FullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0631AEF5283AD7D900F5CF88 /* FullViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		06082538282D828E0068547D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0608253B282D828E0068547D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0608253D282D828E0068547D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0631AEF5283AD7D900F5CF88 /* FullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				06082531282D82870068547D /* SceneDelegate.swift */,
 				06082533282D82870068547D /* HomeViewController.swift */,
 				06082535282D82870068547D /* Main.storyboard */,
+				0631AEF5283AD7D900F5CF88 /* FullViewController.swift */,
 				06082538282D828E0068547D /* Assets.xcassets */,
 				0608253A282D828E0068547D /* LaunchScreen.storyboard */,
 				0608253D282D828E0068547D /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06082534282D82870068547D /* HomeViewController.swift in Sources */,
+				0631AEF6283AD7D900F5CF88 /* FullViewController.swift in Sources */,
 				06082530282D82870068547D /* AppDelegate.swift in Sources */,
 				06082532282D82870068547D /* SceneDelegate.swift in Sources */,
 			);
