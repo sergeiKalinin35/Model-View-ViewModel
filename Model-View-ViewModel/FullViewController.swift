@@ -8,13 +8,28 @@
 import UIKit
 
 class FullViewController: UIViewController {
-
+    
+    @IBOutlet var nameFull: UILabel!
+    @IBOutlet var imageFull: UIImageView!
+    @IBOutlet var numberLessons: UILabel!
+    @IBOutlet var numberTests: UILabel!
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-     
-    }
+        
+}
     
 
+    
+    
+    
+    
+    
+    
+    
    
 }

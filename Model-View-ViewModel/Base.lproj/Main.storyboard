@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="130" id="tqn-jD-83D">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="130" id="tqn-jD-83D" customClass="TopTableViewCell" customModule="Model_View_ViewModel" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tqn-jD-83D" id="Hl5-SB-gHq">
@@ -48,6 +48,10 @@
                                         <constraint firstItem="BPt-19-xqW" firstAttribute="leading" secondItem="Hl5-SB-gHq" secondAttribute="leading" id="yIg-Oe-Ufj"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageTop" destination="BPt-19-xqW" id="ViL-zS-fiH"/>
+                                    <outlet property="nameCourses" destination="RSl-Br-7WJ" id="75F-vQ-Emq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -118,8 +122,11 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Mx-Vp-hx6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swift-og" translatesAutoresizingMaskIntoConstraints="NO" id="3Mx-Vp-hx6">
                                 <rect key="frame" x="20" y="238" width="374" height="355"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3Mx-Vp-hx6" secondAttribute="height" multiplier="374:355" id="wC8-O9-d6r"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nCI-iB-mxK"/>
@@ -138,6 +145,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gEE-T3-ZLw"/>
+                    <connections>
+                        <outlet property="imageFull" destination="3Mx-Vp-hx6" id="ICw-fF-Wjm"/>
+                        <outlet property="nameFull" destination="vxr-kp-eCt" id="P2S-Ef-HHj"/>
+                        <outlet property="numberLessons" destination="eL2-8i-hde" id="eJi-sr-xmM"/>
+                        <outlet property="numberTests" destination="eag-mx-J1C" id="xaT-5s-tWb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCW-el-geM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
