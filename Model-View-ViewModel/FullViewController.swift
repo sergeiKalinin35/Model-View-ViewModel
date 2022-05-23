@@ -9,11 +9,13 @@ import UIKit
 
 class FullViewController: UIViewController {
     
-    @IBOutlet var nameFull: UILabel!
-    @IBOutlet var imageFull: UIImageView!
-    @IBOutlet var numberLessons: UILabel!
-    @IBOutlet var numberTests: UILabel!
-    @IBOutlet var heart: UIButton!
+    @IBOutlet private weak var nameFull: UILabel!
+    @IBOutlet private weak var imageFull: UIImageView!
+    @IBOutlet private weak var numberLessons: UILabel!
+    @IBOutlet private weak var numberTests: UILabel!
+    @IBOutlet private weak var heart: UIButton!
+    
+    
     
     
     override func viewDidLoad() {
