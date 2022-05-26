@@ -50,8 +50,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageTop" destination="BPt-19-xqW" id="ViL-zS-fiH"/>
-                                    <outlet property="nameCourses" destination="RSl-Br-7WJ" id="75F-vQ-Emq"/>
+                                    <segue destination="aIv-TJ-MMS" kind="show" identifier="ShowDetails" id="726-Rh-DEz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -63,7 +62,6 @@
                     <navigationItem key="navigationItem" title="Courses" id="DeI-v0-C2g"/>
                     <connections>
                         <outlet property="tableViewTwo" destination="Tqu-qN-I8J" id="YqF-34-nyT"/>
-                        <segue destination="aIv-TJ-MMS" kind="show" identifier="segue" id="3wa-l4-hOv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iW9-cL-uUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

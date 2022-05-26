@@ -15,26 +15,17 @@ class FullViewController: UIViewController {
     @IBOutlet private weak var numberTests: UILabel!
     @IBOutlet private weak var heart: UIButton!
     
-    var viewModel: FullViewModelProtocol! {
-        didSet {
-            self.nameFull.text = viewModel.courseName
-            self.numberLessons.text = viewModel.numberOfLessons
-            self.numberTests.text = viewModel.numberOfTests
-            guard let imageData = viewModel.imageData else { return }
-            imageFull.image = UIImage(data: imageData)
-        }
-    }
+    var viewModel: FullViewModelProtocol!
+  
     
-    var course: Course!
+    
         
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewModel = FullViewModel(course: course)
-        setupUI()
+       setupUI()
 
     }
     
@@ -48,6 +39,12 @@ class FullViewController: UIViewController {
     }
     
     private func setupUI() {
+        
+        nameFull.text = viewModel.courseName
+        numberLessons.text = viewModel.numberOfLessons
+        numberTests.text = viewModel.numberOfTests
+        guard let imageData = viewModel.imageData else { return }
+        imageFull.image = UIImage(data: imageData)
         setImageForFavoriteButton()
     }
     

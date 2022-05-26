@@ -10,14 +10,13 @@ import UIKit
 class HomeViewController: UITableViewController {
     
     
-    @IBOutlet var tableViewTwo: UITableView!
+    @IBOutlet weak var tableViewTwo: UITableView!
     
     private var viewModel: HomeViewModelProtocol! {
         didSet {
-            
-            
-            
-            
+            viewModel.fetchCourses {
+                self.tableViewTwo.reloadData()
+            }
         }
     }
     
@@ -25,27 +24,37 @@ class HomeViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewTwo.rowHeight = 130
-      
+      viewModel = HomeViewModel()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailVC = segue.destination as! FullViewController
+        detailVC.viewModel = sender as? FullViewModelProtocol
     }
     
     
+    
+    
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        viewModel.numberOfRows()
     }
  
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewTwo.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TopTableViewCell
-        
-        
+        cell.viewModel = viewModel.cellViewModel(at: indexPath)
         
         return cell
     }
     
-//
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableViewTwo.deselectRow(at: indexPath, animated: true)
+        let detailsViewModel = viewModel.viewModelForSelectedRow(at: indexPath)
+        performSegue(withIdentifier: "ShowDetails", sender: detailsViewModel)
+    }
     
 }
 

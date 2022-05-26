@@ -21,6 +21,7 @@
 		0631AF00283BBAD500F5CF88 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0631AEFF283BBAD500F5CF88 /* DataManager.swift */; };
 		0631AF09283C0AAC00F5CF88 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0631AF08283C0AAC00F5CF88 /* HomeViewModel.swift */; };
 		0631AF0B283C0D3000F5CF88 /* FullViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0631AF0A283C0D3000F5CF88 /* FullViewModel.swift */; };
+		06A6197E28402EAD003DD90B /* TopCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A6197D28402EAD003DD90B /* TopCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		0631AEFF283BBAD500F5CF88 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		0631AF08283C0AAC00F5CF88 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0631AF0A283C0D3000F5CF88 /* FullViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullViewModel.swift; sourceTree = "<group>"; };
+		06A6197D28402EAD003DD90B /* TopCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				0631AEF7283ADC4900F5CF88 /* TopTableViewCell.swift */,
+				06A6197D28402EAD003DD90B /* TopCellViewModel.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				06082534282D82870068547D /* HomeViewController.swift in Sources */,
 				0631AF0B283C0D3000F5CF88 /* FullViewModel.swift in Sources */,
 				0631AEF8283ADC4900F5CF88 /* TopTableViewCell.swift in Sources */,
+				06A6197E28402EAD003DD90B /* TopCellViewModel.swift in Sources */,
 				0631AF09283C0AAC00F5CF88 /* HomeViewModel.swift in Sources */,
 				0631AEF6283AD7D900F5CF88 /* FullViewController.swift in Sources */,
 				0631AEFC283BB4FB00F5CF88 /* NetworkManager.swift in Sources */,

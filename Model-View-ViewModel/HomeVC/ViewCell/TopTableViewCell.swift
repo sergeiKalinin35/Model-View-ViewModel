@@ -9,22 +9,27 @@ import UIKit
 
 class TopTableViewCell: UITableViewCell {
     
-    
-    @IBOutlet var imageTop: UIImageView!
-    @IBOutlet var nameCourses: UILabel!
-    
-    
-    
-    
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-      
+    var viewModel:TopCellViewModelProtocol! {
+        didSet{
+            var content = defaultContentConfiguration()
+            content.text = viewModel.courseName
+            guard let imageData = viewModel.imageData else { return }
+            content.image = UIImage(data: imageData)
+            contentConfiguration = content
+        }
+        
     }
+    
+    
+    
+ //   @IBOutlet var imageTop: UIImageView!
+  //  @IBOutlet var nameCourses: UILabel!
+    
+    
+    
+    
+    
+    
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
 
 }
