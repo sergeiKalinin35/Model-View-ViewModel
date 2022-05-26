@@ -55,9 +55,6 @@ class FullViewController: UIViewController {
     private func setImageForFavoriteButton() {
         
         heart.tintColor = viewModel.isFavorite ? .red : .gray
-        
     }
-    
-    
 }
 

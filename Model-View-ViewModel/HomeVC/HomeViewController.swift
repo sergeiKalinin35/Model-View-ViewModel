@@ -12,7 +12,14 @@ class HomeViewController: UITableViewController {
     
     @IBOutlet var tableViewTwo: UITableView!
     
-  //  var courses: [Course] = []
+    private var viewModel: HomeViewModelProtocol! {
+        didSet {
+            
+            
+            
+            
+        }
+    }
     
 
     override func viewDidLoad() {

@@ -114,7 +114,6 @@
 		0631AF04283C08A100F5CF88 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				0631AF06283C090400F5CF88 /* ViewCell */,
 				06082531282D82870068547D /* SceneDelegate.swift */,
 				0608252F282D82870068547D /* AppDelegate.swift */,
 			);
@@ -141,6 +140,7 @@
 		0631AF07283C09C700F5CF88 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				0631AF06283C090400F5CF88 /* ViewCell */,
 				06082533282D82870068547D /* HomeViewController.swift */,
 				0631AF08283C0AAC00F5CF88 /* HomeViewModel.swift */,
 			);
